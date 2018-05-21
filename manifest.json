@@ -1,0 +1,11 @@
+{
+    "name": "Oof!",
+    "version": "1.0",
+    "description": "Plays the Roblox oof sound on tab close!",
+    "permissions": ["tabs"],
+    "background": {
+      "scripts": ["main.js"],
+      "persistent": false
+    },
+    "manifest_version": 2
+  }
