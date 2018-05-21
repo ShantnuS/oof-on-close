@@ -7,5 +7,6 @@
       "scripts": ["main.js"],
       "persistent": false
     },
+	"icons": {"48": "icon48.png"},
     "manifest_version": 2
   }
