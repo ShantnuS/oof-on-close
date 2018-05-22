@@ -2,14 +2,16 @@
     "name": "Oof!",
     "version": "1.0",
     "description": "Plays the Roblox oof sound on tab close!",
-    "permissions": ["tabs"],
+    "permissions": ["tabs", "storage"],
     "background": {
       "scripts": ["main.js"],
       "persistent": false
     },
 	"icons": {"48": "icon48.png"},
-	"browser_action": {
-		"default_icon": "icon48.png"
-	},
+	"browser_action": { 
+        "default_icon": {"48": "icon48.png",
+						"128": "icon128.png"},
+		"default_popup": "popup.html" 		
+    },
     "manifest_version": 2
-  }
+}
