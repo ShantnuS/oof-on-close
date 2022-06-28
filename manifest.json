@@ -1,8 +1,8 @@
 {
     "name": "Oof!",
-    "version": "1.1.1",
+    "version": "1.1.3",
     "description": "Plays the Roblox oof sound on tab close!",
-    "permissions": ["tabs", "storage"],
+    "permissions": [],
     "background": {
       "scripts": ["main.js"],
       "persistent": false
