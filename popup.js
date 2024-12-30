@@ -1,20 +1,21 @@
-var  bgp = chrome.extension.getBackgroundPage()
+document.addEventListener("DOMContentLoaded", () => {
+	const btn = document.getElementById("btnToggle");
 
-document.addEventListener('DOMContentLoaded', function () {
-	var btn = document.getElementById("btnToggle");
-    btn.addEventListener('click', toggle);
+	chrome.storage.local.get("play_audio", (data) => {
+		const playAudio = data.play_audio || false; // Default to false if undefined
+		btn.value = "Toggle: " + playAudio.toString().toUpperCase();
+	});
 
-	if(localStorage.play_audio == undefined) {
-        localStorage.play_audio = "false";
-    }
-	
-	btn.value = "Toggle: " + localStorage.play_audio.toUpperCase();
-	
+	btn.addEventListener("click", () => {
+		chrome.storage.local.get("play_audio", (data) => {
+			const currentState = data.play_audio || false;
+			const newState = !currentState;
+
+			chrome.storage.local.set({ play_audio: newState }, () => {
+				btn.value = "Toggle: " + newState.toString().toUpperCase();
+			});
+
+			chrome.runtime.sendMessage({ type: "TOGGLE_AUDIO", state: newState });
+		});
+	});
 });
-
-function toggle(){
-	var tog = JSON.parse(localStorage.play_audio);
-	tog = !tog;
-	localStorage.play_audio = tog;
-	document.getElementById("btnToggle").value = "Toggle: " + localStorage.play_audio.toUpperCase();
-}

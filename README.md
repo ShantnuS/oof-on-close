@@ -12,8 +12,7 @@ Chrome extension that plays the roblox "oof" sound when tab is closed.
 
 ## Version overview:    
     
-* 1.0 - Plays "oof" when tab is closed.
-* 1.1 - Toggle switch to turn "oof" on/off. 
-* 1.2 (Upcoming) - Change playback speed of "oof" using slider". 
-* 42.7 (Stretch goal) - Use machine learning techniques to determine ideal "oof" frequency based on tab contents and browsing habits.
+* 1.0.0 - Plays "oof" when tab is closed.
+* 1.1.0 - Toggle switch to turn "oof" on/off. 
+* 2.0.0 - Upgrade to Chrome Extension Manifest V3
 
