@@ -1,12 +1,11 @@
 {
   "name": "Oof!",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Plays the Roblox oof sound on tab close!",
   "manifest_version": 3,
 
   "permissions": [
     "storage",
-    "tabs",
     "offscreen"
   ],
 
